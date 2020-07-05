@@ -33,7 +33,21 @@ body {
     align-items: center;
 }
 
-#controls {
-    position: absolute;
-    bottom: 0;
+div.container {
+  border: 1px solid black;
+  min-height: 700px;
+}
+
+div#notes{
+  font-size: 1.5em;
+}
+
+div#rewind{
+  float: right;
+  width: 40px;
+  display:none;
+}
+
+div#rewind img {
+  width:100%;
 }

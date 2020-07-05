@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>ChessBot</title>
+        <title>Chess Replayer</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.1/bootstrap-table.min.js"></script>
 
@@ -33,7 +33,7 @@
     <body>
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container-fluid">
-          <h1 id="logo">ChessBot</h1>
+          <h1 id="logo">Chess Replayer</h1>
       </div>
     </nav>
     <div class="container">
@@ -47,34 +47,25 @@
             </div>
             <div class="col-xs-12 col-sm-6">
                 <div id="secondWindow">
-                    <h3><span id="status"></span></h3>
-                    <div id="moveTable">
-                        <table class="table table-striped table-condensed" id="pgn">
-                            <thead>
-                                <tr>
-                                    <th>#</th>
-                                    <th>White</th>
-                                    <th>Black</th>
-                                </tr>
-                            </thead>
-                        </table>
-                    </div>
                     <div id="controls">
                         <form class="form-inline">
-
-                            <button type="button" class="btn btn-default" id="backBtn" onclick="takeBack()";>Take Back</button>
-                            <button type="button" class="btn btn-default" id="reset" onclick="newGame()";>New Game</button>
-                            <select class="form-control" id="sel1">
-                                <option value="5">Depth: 5</option>
-                                <option value="4">Depth: 4</option>
-                                <option value="3">Depth: 3</option>
-                                <option value="2">Depth: 2</option>
-                                <option value="1">Depth: 1</option>
-                            </select>
+                           <button type="button" class="btn btn-default" id="nextBtn" onclick="previousMove()";>Previous</button>
+                           <button type="button" class="btn btn-default" id="previousBtn" onclick="nextMove()";>Next</button>
+                           <button type="button" class="btn btn-default" id="resetBtn" onclick="resetMoves()";>Reset</button>
                         </form>
+                        <div id="rewind">
+                          <img src="/static/rewind.png">
+                        </div>
+                    </div>
+                    <div id="status">
+                    </div>
+                    <h2>Moves</h2>
+                    <div id="moves">
                     </div>
                 </div>
             </div>
+        </div>
+        <div id="notes">
         </div>
     </div>
     </body>
